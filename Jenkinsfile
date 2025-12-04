@@ -32,7 +32,7 @@ pipeline {
                         sh 'npm ci'
                         sh 'npx vitest run --reporter=verbose'
                     }
-                },
+                }
                 stage('integration tests') {
                     agent {
                         docker {
