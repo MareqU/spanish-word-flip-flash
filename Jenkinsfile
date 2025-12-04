@@ -37,10 +37,10 @@ pipeline {
                     agent {
                         docker {
                             image 'mcr.microsoft.com/playwright:v1.54.2-jammy'
-                            reuseNode true
                         }
                     }
                     steps {
+                        sh 'npm ci'
                         sh 'npx playwright test'
                     }
                 }
